@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if image_source[:4] == 'http' %}
+<img src="{{image_source}}" height="400", style="display: block;
+margin-left: auto; margin-right: auto">
+{% else %}
+<img src="{{url_for('static', filename=image_source)}}" height="400", style="display: block;
+margin-left: auto; margin-right: auto">
+{%endif%}
+
+
+<h2 align="center">Color Table</h2>
+
+<table width="30%" height="40%" align="center">
+  <tr height="20">
+    <th>Color</th>
+    <th>Hex code</th>
+<!--      <th> RGB </th>-->
+    <th>Percentage</th>
+  </tr>
+    {% for i in range(10) %}
+  <tr align="center">
+    <td style="background-color: {{ hex_perc_colors[i][0] }}" height="30", width="150"></td>
+    <td>{{ hex_perc_colors[i][0] }}</td>
+<!--    <td>{{ all_colors[i][0] }}</td>-->
+      <td>{{ hex_perc_colors[i][1] }}</td>
+  </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

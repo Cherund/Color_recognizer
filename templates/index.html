@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image color recognizer</title>
+</head>
+<body>
+
+  <h2>Please, enter url link or put your file in a static folder and enter its name
+      and provide delta for colors</h2>
+  <form action="/color_recognizer" method="post">
+      <table>
+           <tr>
+  <th ><label>Image source:</label></th>
+  <th><input type="text" name="image" placeholder="source" size="29"></th>
+           </tr>
+          <tr>
+  <th align="right"><label>Delta:</label></th>
+  <th align="left"><input type="text" name="delta" placeholder="1-255">
+      <button type="submit">Submit</button></th>
+                       </tr>
+      </table>
+  </form>
+
+</body>
+</html>
